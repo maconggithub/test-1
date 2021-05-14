@@ -1,3 +1,24 @@
+import pandas as pd
+pd.set_option('display.max_columns', None)
+# contributorcommits=pd.read_csv('D:\\code\\OSS整理\\DataProcessNew\\Task3\\TaskStep2\\ContributorCommits_819.csv',encoding='utf-8',nrows=1000000)
+#
+# print(contributorcommits[contributorcommits['contributor_login'].str.contains('\[bot\]')])
+# print(contributorcommits[contributorcommits['contributor_login']=='dependencies[bot]'])
+# print(contributorcommits[contributorcommits['contributor_login']=='dotnet-maestro[bot]'])
+# print(contributorcommits[contributorcommits['contributor_login']=='docker-unir[bot]'])
+# print(contributorcommits[contributorcommits['contributor_login']=='dependabot-preview[bot]'])
+
+
+# with open('E:\\BitCoin Data\\blocks\\blk00001.dat',encoding='utf-8') as of:
+#     firstline = of.readline()
+#     for line in of:
+#         print(line)
+
+# df = pd.read_table("E:\\BitCoin Data\\blocks\\blk00000.dat", sep='::', header=None, engine='python')
+#
+# df.columns = (['user_id', 'item_id', "rating", "timestamp"])
+# df.head()
+
 d1=pd.read_csv('Contributors_outsider_819(withoutbio).csv',encoding='utf-8')
 d2=pd.read_csv('D:\\code\\OSS整理\\DataProcessNew\\TaskStep6\\Contributors_819_outsider.csv',encoding='utf-8')
 print(d1)
@@ -14,3 +35,5 @@ print(df2)
 
 d3=pd.merge(df1,df2,on=['contributor_login','repo_name'])
 print(d3)
+
+##测试使用
