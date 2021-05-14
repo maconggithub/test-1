@@ -29,11 +29,3 @@ df1=df1[['contributor_login','repo_name']].drop_duplicates().reset_index(drop=Tr
 
 df2=d2[d2['is_member']==0]
 df2=df2[['contributor_login','repo_name']].drop_duplicates().reset_index(drop=True)
-
-print(df1)
-print(df2)
-
-d3=pd.merge(df1,df2,on=['contributor_login','repo_name'])
-print(d3)
-
-##测试使用
